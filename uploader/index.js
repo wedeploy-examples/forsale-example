@@ -9,8 +9,6 @@ const storage = multer.diskStorage({
 const upload = multer({storage});
 const app = express();
 app.post('/upload', upload.single('image'), (req, res) => {
-  res.redirect(`${req.protocol}://${req.get('host')}/images`);
-
   WeDeploy
     .data('data-forsale.wedeploy.sh')
     .create('listings', {
@@ -20,10 +18,10 @@ app.post('/upload', upload.single('image'), (req, res) => {
       "filename": req.file.filename
     })
     .then(function(succ){
-      console.log(succ)
+      res.redirect(`${req.protocol}://${req.get('host')}?cmd=success`);
     })
     .catch(function(err){
-      console.log(err)
+      res.redirect(`${req.protocol}://${req.get('host')}?cmd=fail`);
     });
 });
 app.use(express.static(__dirname + '/public'));

@@ -7,7 +7,7 @@
 <body>
   <form name="newItem" action="/upload" method="post" enctype="multipart/form-data">
     <h4>Listing Uploader</h4>
-    
+
     <div class="form-group">
       <label>Title</label>
       <input type="text" placeholder="Title of your listing" class="form-control" name="title" value="" maxlength="100" autofocus="">
@@ -32,6 +32,16 @@
       <button type="submit" class="btn btn-success" name="submit">Post Item</button>
     </div>
   </form>
-  </body>
+  <script type="text/javascript">
+    const params = new URL(window.location.href).searchParams;
+    const cmd = params.get('cmd')
+    if (cmd === 'success') {
+
+    } else if (cmd === 'fail') {
+
+    } else {
+
+    }
+  </script>
 </body>
 </html>
