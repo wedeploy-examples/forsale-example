@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Upload</title>
+  <title>Listing Uploader</title>
 </head>
 <body>
   <form name="newItem" action="/upload" onsubmit="createListing(); return false;" method="post" enctype="multipart/form-data">
-    <h4>New Listing</h4>
+    <h4>Listing Uploader</h4>
     
     <div class="form-group">
       <label>Title</label>
@@ -38,9 +38,9 @@
     var auth = WeDeploy.auth('auth-forsale.wedeploy.io');
     var data = WeDeploy.data('data-forsale.wedeploy.io');
     
-    if (auth.currentUser == null) {
-      location.href = 'login.html';
-    }
+    // if (auth.currentUser == null) {
+    //   location.href = 'login.html';
+    // }
 
     function createListing() {
       data.create('listings', {
