@@ -1,6 +1,6 @@
 {
   "id": "ui",
   "volumes": {
-    "images": "./public/images"
+    "images": "/wedeploy-container/images"
   }
 }

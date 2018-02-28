@@ -2,6 +2,6 @@
   "id": "uploader",
   "port": 3000,
   "volumes": {
-    "images": "./public/images"
+    "images": "/wedeploy/app/public/images"
   }
 }
