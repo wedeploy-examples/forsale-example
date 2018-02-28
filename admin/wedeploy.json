@@ -1,5 +1,5 @@
 {
-  "id": "uploader",
+  "id": "admin",
   "port": 3000,
   "volumes": {
     "images": "/wedeploy/app/public/images"
