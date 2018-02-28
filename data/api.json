@@ -1,16 +1,6 @@
 [
 	{
-		"path": "/products/*",
-		"data": true,
-		"auth": {
-			"validator": "$auth != null"
-		}
-	},
-	{
-		"path": "/cart/*",
-		"data": true,
-		"auth": {
-			"validator": "$auth != null"
-		}
+		"path": "/listings/*",
+		"data": true
 	}
 ]
