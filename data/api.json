@@ -1,6 +1,6 @@
 [
-	{
-		"path": "/listings/*",
-		"data": true
-	}
+  {
+    "path": "/listings/*",
+    "data": true
+  }
 ]
