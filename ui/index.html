@@ -87,7 +87,7 @@
     // Database ------------------------------------------------------------------------
 
     function filter(type) {
-      return WeDeploy.data('data-forsale.wedeploy.io')
+      return WeDeploy.data('data-forsale.wedeploy.sh')
         .get('listings')
         .then(function(listings) {
           plotListings(listings);
@@ -109,7 +109,7 @@
           </div>
           <div class="blur"></div>
           <div class="img-mask">
-            <img src="assets/images/${listings[i].filename}" alt="${listings[i].description}" />
+            <img src="/images/${listings[i].filename}" alt="${listings[i].description}" />
           </div>
         </li>`;
       }
