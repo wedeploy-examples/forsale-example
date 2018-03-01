@@ -27,8 +27,9 @@ HEADER
 #products header {
   position: relative;
   height: 120px;
-  background-color: #5f018d;
+  background-color: #193ca5;
   text-align: center;
+  box-shadow: 0 3px 7px 2px rgba(9, 22, 60, 0.2), 0 1px 3px rgba(9, 22, 60, 0.3);
 }
 
 #products header .logo {
@@ -55,18 +56,13 @@ HEADER
   position: relative;
   width: 36px;
   height: 36px;
-  overflow: hidden;
   border-radius: 50%;
-  transition: box-shadow .33s ease-in-out;
-}
-
-#products header .admin:hover {
-  box-shadow: 0px 2px 5px rgba(37, 0, 55, 1);
-}
-
-#products header .admin span {
   background: white;
-  color: #250037;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#products header .admin .icon-16-plus {
+  color: #09163c;
   text-align: center;
   display: block;
   font-size: 22px;
@@ -79,6 +75,37 @@ HEADER
   height: 36px;
   z-index: 9;
   border-radius: 50%;
+}
+
+#products header .admin .tooltip {
+  height: 32px;
+  width: 138px;
+  font-family: 'Circular Std', sans-serif;
+  font-size: 12px;
+  line-height: 32px;
+  background: white;
+  color: #082947;
+  text-align: center;
+  position: absolute;
+  border-radius: 4px;
+  top: 44px;
+  left: -100px;
+  z-index: 400;
+  display: none;
+  text-transform: none;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  font-weight: 900;
+}
+
+@media (max-width: 600px) {
+  #products header .admin .tooltip {
+    left: 0px;
+  }
+}
+
+#products header .admin:hover .tooltip,
+#products header .admin:focus .tooltip {
+  display: block;
 }
 
 /* -------------------------------- 
@@ -212,7 +239,6 @@ PRODUCT LIST
   font-size: 18px;
   line-height: 24px;
   color: #082947;
-  letter-spacing: -0.03rem;
 
   text-align: left;
   vertical-align: middle;
@@ -236,7 +262,7 @@ PRODUCT LIST
   font-size: 18px;
   line-height: 24px;
   color: #082947;
-  letter-spacing: -0.03rem;
+  font-weight: 900;
 
   text-align: right;
   vertical-align: middle;
@@ -255,8 +281,8 @@ PRODUCT LIST
 
 #products .gallery li img {
   display: block;
-  min-width: 100%;
-  min-height: 100%;
+  max-width: 150%;
+  max-height: 160%;
   position: absolute;
   margin: auto;
   top: -100%;
@@ -275,7 +301,7 @@ PRODUCT LIST
 #products .gallery li .add-to-cart {
   opacity: 0;
   position: absolute;
-  top: 50%;
+  top: 43%;
   left: 50%;
   z-index: 30;
 
@@ -288,63 +314,6 @@ PRODUCT LIST
 
   transition: all 0.3s;
   transform: translateX(-50%) translateY(-50%);
-}
-
-#products .gallery li .filter-similar-products {
-  display: block;
-  opacity: 0;
-  position: absolute;
-  top: 12px;
-  left: 20px;
-  width: 32px;
-  height: 32px;
-  z-index: 300;
-  padding: 0;
-  text-align: center;
-
-  background: rgba(255, 255, 255, 0.6);
-  transition: all 0.3s;
-}
-
-#products .gallery li .filter-similar-products:hover,
-#products .gallery li .filter-similar-products:focus {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-#products .gallery li .filter-similar-products .icon-12-magnifier {
-  color: #082947;
-  font-size: 12px;
-  line-height: 32px;
-}
-
-#products .gallery li .filter-similar-products .tooltip {
-  height: 36px;
-  width: 160px;
-  font-size: 12px;
-  line-height: 36px;
-  background: white;
-  color: #082947;
-  text-align: center;
-  position: absolute;
-  border-radius: 4px;
-  top: 40px;
-  left: -62px;
-  z-index: 400;
-  display: none;
-  text-transform: none;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-  letter-spacing: -0.02em;
-}
-
-@media (max-width: 600px) {
-  #products .gallery li .filter-similar-products .tooltip {
-    left: 0px;
-  }
-}
-
-#products .gallery li .filter-similar-products:hover .tooltip,
-#products .gallery li .filter-similar-products:focus .tooltip {
-  display: block;
 }
 
 #products .gallery li:hover .add-to-cart,
