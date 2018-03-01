@@ -1,0 +1,101 @@
+body {
+  font-family: 'Circular Std', sans-serif;
+  position: relative;
+  background: #193ca5;
+}
+
+.form-container {
+  background: white;
+  font-weight: 400;
+  border-radius: 4px;
+  color: #09163c;
+  margin: 80px auto;
+  width: 90%;
+  max-width: 400px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(8, 41, 71, 0.52);
+}
+
+.title {
+  text-align: center;
+  margin: 24px 0 36px;
+}
+
+.title h2 {
+  font-weight: 900;
+  line-height: normal;
+  font-size: 32px;
+  text-transform: uppercase;  
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-left: 2px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  position: relative;
+  background: rgba(25, 60, 165, .05);
+  border-radius: 2px;
+  padding: 18px;
+  margin: 12px 0 24px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background: rgba(25, 60, 165, .1);
+}
+
+.form-group textarea {
+  height: 70px;
+  line-height: 18px;
+}
+
+.btn-wrapper {
+  text-align: center;
+}
+
+#submit {
+  outline: none;
+  border: none;
+  position: relative;
+  border-radius: 4px;
+  padding: 18px;
+  background: #193ca5;
+  color: white;
+  font-weight: 900;
+  font-size: 14px;
+  transition: all .3s;
+}
+
+#submit:hover,
+#submit:active {
+  background: rgba(25, 60, 165, .9);
+  cursor: pointer;
+}
+
+.link {
+  text-align: center;
+  margin: 12px 0 24px;
+}
+
+.link a {
+  color: #09163c;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all .3s;
+}
+
+.link a:hover,
+.link a:active {
+  color: rgba(9, 22, 60, .8);
+}

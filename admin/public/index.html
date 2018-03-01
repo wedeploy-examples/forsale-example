@@ -2,37 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Listing Uploader</title>
+  <title>ForSale - New Listing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdn.wedeploy.io/fonts/Circular-Std.css">
+  <link rel="stylesheet" href="https://cdn.wedeploy.io/icons/icon-16.css">
+
+  <link rel="stylesheet" type="text/css" href="assets/style/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/style/main.css">
 </head>
 <body>
-  <form name="newItem" action="/upload" method="post" enctype="multipart/form-data">
-    <h4>Listing Uploader</h4>
-
-    <div class="form-group">
-      <label>Title</label>
-      <input type="text" placeholder="Title of your listing" class="form-control" name="title" value="" maxlength="100" autofocus="">
+  <div class="form-container">
+    <div class="title">
+      <h2>Listing Uploader</h2>
     </div>
+    <form name="newItem" action="/upload" id="newItem" method="post" enctype="multipart/form-data">
 
-    <div class="form-group">
-      <label>Description</label>
-      <input type="textarea" placeholder="Share details about the item you're selling..." class="form-control" name="description" value="" autofocus="">
-    </div>
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" placeholder="Title of your listing" class="form-control" name="title" value="" maxlength="100">
+      </div>
 
-    <div class="form-group">
-      <label>Price</label>
-      <input type="number" placeholder="0" class="form-control" name="price" value="" maxlength="100" autofocus="">
-    </div>
+      <div class="form-group">
+        <label>Description</label>
+        <textarea type="textarea" form="newItem" placeholder="Share details about the item you're selling..." class="form-control" name="description" maxlength="100" value=""></textarea>
+      </div>
 
-     <div class="form-group">
-      <label>Image</label>
-      <input type="file" class="form-control" name="image" autofocus="">
-    </div>
+      <div class="form-group">
+        <label>Price</label>
+        <input type="number" placeholder="0" class="form-control" name="price" value="" maxlength="6">
+      </div>
 
-    <div class="btn-wrapper">
-      <button type="submit" class="btn btn-success" name="submit">Post Item</button>
+       <div class="form-group">
+        <label>Image</label>
+        <input type="file" class="form-control" name="image">
+      </div>
+
+      <div class="btn-wrapper">
+        <button type="submit" id="submit" name="submit">Upload Listing</button>
+      </div>
+    </form>
+    <div class="link">
+      <a href="https://ui-forsale.wedeploy.sh">Go back to ForSale</a>
     </div>
-  </form>
-  <script type="text/javascript">
+  </div>
+  <script>
     const params = new URL(window.location.href).searchParams;
     const cmd = params.get('cmd')
     if (cmd === 'success') {
