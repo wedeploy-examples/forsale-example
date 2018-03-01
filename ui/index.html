@@ -56,8 +56,8 @@
       var html = '';
       var list = document.getElementById('productList');
       for(var i = 0; i < listings.length; i++) {
-        html += `<li class="mix ${listings[i].type}" data-title="${listings[i].title}">
-          <a href="javascript:saveItemToShoppingCart('${listings[i].id}', '${listings[i].title}', '${listings[i].filename}', ${listings[i].price});" class="add-to-cart">View item</a>
+        html += `<li class="mix" data-title="${listings[i].title}">
+          <p class="add-to-cart">${listings[i].description}</p>
           <div class="bottom-info">
             <span class="title">${listings[i].title}</span>
             <span class="price">$${listings[i].price}</span>
