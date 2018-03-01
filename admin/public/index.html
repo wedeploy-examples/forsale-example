@@ -8,8 +8,6 @@
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdn.wedeploy.io/fonts/Circular-Std.css">
   <link rel="stylesheet" href="https://cdn.wedeploy.io/icons/icon-16.css">
-
-  <link rel="stylesheet" type="text/css" href="assets/style/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/style/main.css">
 </head>
 <body>
@@ -20,23 +18,27 @@
     <form name="newItem" action="/upload" id="newItem" method="post" enctype="multipart/form-data">
 
       <div class="form-group">
+        <p id="alert"></p>
+      </div>
+
+      <div class="form-group">
         <label>Title</label>
         <input type="text" placeholder="Title of your listing" class="form-control" name="title" value="" maxlength="100">
       </div>
 
       <div class="form-group">
         <label>Description</label>
-        <textarea type="textarea" form="newItem" placeholder="Share details about the item you're selling..." class="form-control" name="description" maxlength="100" value=""></textarea>
+        <textarea type="textarea" form="newItem" placeholder="Share details about the item you're selling in 100 characters..." class="form-control" name="description" maxlength="100" value=""></textarea>
       </div>
 
       <div class="form-group">
         <label>Price</label>
-        <input type="number" placeholder="0" class="form-control" name="price" value="" maxlength="6">
+        <input type="number" placeholder="0" class="form-control" name="price" value="" min="0" max="99999" step=".01">
       </div>
 
        <div class="form-group">
         <label>Image</label>
-        <input type="file" class="form-control" name="image">
+        <input type="file" class="form-control" accept="image/*" name="image">
       </div>
 
       <div class="btn-wrapper">
@@ -48,12 +50,29 @@
     </div>
   </div>
   <script>
+    const form = document.querySelector('form');
+    const button = document.querySelector('button');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      button.disabled = true;
+      button.innerHTML = "Uploading..."
+    });
+
     const params = new URL(window.location.href).searchParams;
+    const alert = document.getElementById('alert');
     const cmd = params.get('cmd')
     if (cmd === 'success') {
-
+      alert.innerHTML = 'Your posting was published!';
+      alert.style.background = "rgba(8, 173, 25, .1)";
+      alert.style.color = "rgba(8, 173, 25, 1)";
+      alert.style.display = "block";
     } else if (cmd === 'fail') {
-
+      alert.innerHTML = 'Oops, something went wrong. Please try again.';
+      alert.style.background = "rgba(193, 21, 21, .1)";
+      alert.style.color = "rgba(193, 21, 21, 1)";
+      alert.style.display = "block";
     } else {
 
     }

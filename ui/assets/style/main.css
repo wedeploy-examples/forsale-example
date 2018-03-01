@@ -13,6 +13,7 @@ body {
   position: relative;
   background: #082947;
   font-family: 'Circular Std', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 body.white {

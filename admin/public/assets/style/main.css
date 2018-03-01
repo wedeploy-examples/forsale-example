@@ -2,6 +2,7 @@ body {
   font-family: 'Circular Std', sans-serif;
   position: relative;
   background: #193ca5;
+  -webkit-font-smoothing: antialiased;
 }
 
 .form-container {
@@ -38,7 +39,8 @@ body {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group p {
   width: 100%;
   outline: none;
   border: none;
@@ -58,6 +60,11 @@ body {
 .form-group textarea {
   height: 70px;
   line-height: 18px;
+}
+
+.form-group #alert {
+  font-size: 12px;
+  display: none;
 }
 
 .btn-wrapper {
