@@ -50,16 +50,6 @@
     </div>
   </div>
   <script>
-    const form = document.querySelector('form');
-    const button = document.querySelector('button');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      button.disabled = true;
-      button.innerHTML = "Uploading..."
-    });
-
     const params = new URL(window.location.href).searchParams;
     const alert = document.getElementById('alert');
     const cmd = params.get('cmd')

@@ -3,6 +3,7 @@ body {
   position: relative;
   background: #193ca5;
   -webkit-font-smoothing: antialiased;
+  margin: 0;
 }
 
 .form-container {
@@ -11,7 +12,6 @@ body {
   border-radius: 4px;
   color: #09163c;
   margin: 80px auto;
-  width: 90%;
   max-width: 400px;
   padding: 24px;
   box-shadow: 0 2px 12px rgba(8, 41, 71, 0.52);

@@ -56,7 +56,7 @@
       var html = '';
       var list = document.getElementById('productList');
       for(var i = 0; i < listings.length; i++) {
-        html += `<li class="mix" data-title="${listings[i].title}">
+        html += `<a href="javascript:void();" class="mix" data-title="${listings[i].title}">
           <p class="add-to-cart">${listings[i].description}</p>
           <div class="bottom-info">
             <span class="title">${listings[i].title}</span>
@@ -66,7 +66,7 @@
           <div class="img-mask">
             <img src="/images/${listings[i].filename}" alt="${listings[i].description}" />
           </div>
-        </li>`;
+        </a>`;
       }
       list.innerHTML = html;
     }
