@@ -10,7 +10,7 @@ const upload = multer({storage});
 const app = express();
 app.post('/upload', upload.single('image'), (req, res) => {
   WeDeploy
-    .data('data-forsale.wedeploy.sh')
+    .data('data-forsale.wedeploy.io')
     .create('listings', {
       "title": req.body.title,
       "description": req.body.description,

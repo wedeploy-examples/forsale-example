@@ -42,7 +42,7 @@
     // Database ------------------------------------------------------------------------
 
     function filter(type) {
-      return WeDeploy.data(`data-${project_id}.wedeploy.sh`)
+      return WeDeploy.data(`data-${project_id}.wedeploy.io`)
         .get('listings')
         .then(function(listings) {
           plotListings(listings);
@@ -73,7 +73,7 @@
 
     // Load items first time -------------------------------------------------------
 
-    document.getElementById('admin-circle').href=`https://admin-${project_id}.wedeploy.sh`;
+    document.getElementById('admin-circle').href=`https://admin-${project_id}.wedeploy.io`;
 
     // Load items first time -------------------------------------------------------
 
